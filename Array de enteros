@@ -105,6 +105,30 @@ int ascendente(int b[],int z)
 
 }
 
+int descencente(int b[],int z)
+{
+    int a,c=0,x=1;
+    while (c<z)
+    {
+        while (x<z)
+        {
+            if (b[c]<b[x])
+            {
+                a=b[c];
+                b[c]=b[x];
+                b[x]=a;
+            }
+
+            x++;
+        }
+         c++;
+         x=c+1;
+
+    }
+    for (int i=0;i<z;i++)
+            cout<<b[i];
+
+}
 int inv(int b[], int z)
 {
     int a,c=0,x,y;
@@ -139,6 +163,7 @@ int main()
     //suma(r,a);
     //menor(r,a);
     //perfectos(r,a);
-    ascendente(r,a);
+    //ascendente(r,a);
+    descencente(r,a);
     //inv(r,a);
 }
